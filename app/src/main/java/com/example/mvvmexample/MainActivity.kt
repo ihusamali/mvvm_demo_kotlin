@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         mainViewModel.getQuotes().observe(this, Observer {
             binding.quote = it.toString()
         })
-
         binding.btnInsert.setOnClickListener{
             val quote = Quote(1, "Example Test", "Example Author")
             mainViewModel.insertQuote(quote)
